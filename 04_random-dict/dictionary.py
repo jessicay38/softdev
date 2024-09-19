@@ -1,9 +1,9 @@
 #Jessica Yu
 #JST
 #SoftDev
-#Create a prgram that can choose a random devo from one of the periods.
+#K04 - Create a program that can choose a random devo from one of the periods.
 #2024-9-16
-#time spent: 30 minutes 
+#time spent: 0.5 
     
 krewes = {
            4: [ 
