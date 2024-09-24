@@ -1,6 +1,6 @@
-# Clyde 'Thluffy' Sinclair
+# Jessica Yu
 # SoftDev
-# September 2024
+# September 24 2024
 
 from flask import Flask
 app = Flask(__name__)             #create instance of class Flask
@@ -13,3 +13,6 @@ def hello_world():
 
 app.run()
 
+'''
+it printed both of the messages in the terminal when I ran it
+'''

@@ -1,6 +1,6 @@
-# Clyde 'Thluffy' Sinclair
+# Jessica Yu
 # SoftDev
-# September 2024
+# September 24 2024
 
 from flask import Flask
 app = Flask(__name__)           #create instance of class Flask
@@ -14,3 +14,7 @@ def hello_world():
 if __name__ == "__main__":      # true if this file NOT imported
     app.debug = True            # enable auto-reload upon code change
     app.run()
+    
+'''
+__name__ = "__main__" is a conditional that can only be run in this file
+'''

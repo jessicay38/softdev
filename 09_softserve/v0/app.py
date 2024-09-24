@@ -12,3 +12,7 @@ def hello_world():
 
 app.run()                      # runs it
                 
+
+'''
+you can only chanege the contents of the website by changing the return statement
+'''

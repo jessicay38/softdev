@@ -1,6 +1,6 @@
-# Clyde 'Thluffy' Sinclair
+# Jessica Yu
 # SoftDev
-# September 2024
+# September 24 2024
 
 from flask import Flask
 app = Flask(__name__)                 #create instance of class Flask
@@ -13,3 +13,7 @@ def hello_world():
 
 app.debug = True
 app.run()
+
+'''
+debugger adds a layer of protection to your code
+'''
