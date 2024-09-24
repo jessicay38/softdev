@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# Jessica Yu
 # SoftDev
 # September 2024
 
