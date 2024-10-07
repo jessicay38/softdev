@@ -1,0 +1,106 @@
+<!-- 
+Jessica Yu
+JST
+SoftDev
+K13 -- Template for Success: Ultimate compilation of everything we have done and learned so far!
+2024-10-02
+Time Spent : 2h
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> {{ t }} </title>
+        <style>
+            body {
+                background-color: #e8edeb;
+                overflow: hidden;
+                padding: -200px;
+            }
+            th {
+                border-bottom: 2px solid #b0b0b0;
+            }
+            td { 
+                padding-left: 25px; 
+                border-bottom: 1px solid #ddd;
+            }
+            td:hover {
+                background-color: #cbd6d2
+            }
+            h1 {
+                text-align: center;
+                transform: translate(-17%, 800%);
+            }
+            .d1 {
+                text-align: center;
+                font-style: italic;
+                transform: translate(-17%, 790%);
+            }
+            .d2 {
+                transform: translate(-100px, -190px);
+            }
+            .d3 {
+                font-size: 20px;
+                text-align: center;
+                transform: translate(-17%, 300%);
+            }
+            .d4 {
+                width: 800px;
+                height: 80px;
+                line-height: 75px;
+                border: 1px solid #b0b0b0;
+                background-color: #cbd6d2;
+                font-size: 40px;
+                text-align: center;
+                transform: translate(100px, -70px);
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>
+            ~ {{ t }} ~
+        </h1>
+        
+        <div class="d1">
+            Each refresh of the page will return a random weighted job from the occupations table to the right.<br>Click on an occupation in the table to learn more about it!
+        </div>
+        
+        <div class="d3">
+            JST
+            <br>--------------<br>
+            {% for i in r %}
+                {{ i }}
+                {% if not loop.last %} 
+                    <br>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <div class="d4">
+            {{ randW[0] }}
+        </div>
+        
+        <div class="d2">
+            <table align="right">
+                <tr>
+                    {% for i in h %}
+                        {% if not loop.last %}
+                            <th> {{ i }} </th>
+                        {% endif %}
+                    {% endfor %}
+                <tr>
+                {% for i in j %}
+                    <tr>
+                        <td> <a href={{ l[loop.index0] }}>{{ i }}</a> </td>
+                        <td> {{ p[loop.index0] }} </td>
+                    </tr>
+                 {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
