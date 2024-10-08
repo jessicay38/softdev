@@ -1,9 +1,8 @@
-# Jessica Yu
+# Jessica Yu 
 # JST
 # SoftDev
-# K14 - Who do forms work for?
-# 2024-10-7
-# Time Spent: 
+# October 7, 2024
+# Time Spent: 40 minutes
 
 # import conventions:
 # list most general first (standard python library)
@@ -44,33 +43,33 @@ PROTIP: Insert your own in-line comments
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print("\n\n\n")   # We think this will print 3 line breaks in the terminal ## YES
+    print("***DIAG: this Flask obj ***")   # We think this will print the words in bold ## NO! This created a folder called _pycache_ with UTF-8 files inside it. And added new line when reran: ## Rerunning has new line, '***DIAG: this Flask obj ***'
+    print(app)   # We think this will produce an error ## <Flask 'app'>
+    print("***DIAG: request obj ***")   # Never mind, we have no clue what this does! ## Added new line when reran: ## Rerunning has new line, '***DIAG: request obj ***'
+    print(request)   # We ask for a user input and then print it in the terminal ## Added a new line in terminal that says <Request 'http://127.0.0.1:5000/' [GET]>
+    print("***DIAG: request.args ***")   # Never mind, we have no clue what this does! ## Rerunning has new line, '***DIAG: request.args ***'
+    print(request.args)   # Perhaps an error ## ImmutableMultiDict([])
+    print("***DIAG: request.args['username']  ***")   # Never mind, we have no clue what this does! ## ***DIAG: request.args['username']  ***
+    #print(request.args['username'])   # Maybe it asks for a 'username' input ## BadREquestKeyError
+    print("***DIAG: request.headers ***")   # Never mind, we have no clue what this does! ## ***DIAG: request.headers ***
+    print(request.headers)   # Mayhaps an error # Added a ton of lines 
     return render_template( 'login.html' )
 
 
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth" , methods=['GET', 'POST'])
 def authenticate():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print("\n\n\n")
+    print("***DIAG: this Flask obj ***")
+    print(app)
+    print("***DIAG: request obj ***")
+    print(request)
+    print("***DIAG: request.args ***")
+    print(request.args)
+    print("***DIAG: request.args['username']  ***")
+    print(request.args['username'])   ## did not crash this time
+    print("***DIAG: request.headers ***")
+    print(request.headers) ## same things as above
     return "Waaaa hooo HAAAH"  #response to a form submission
 
 
