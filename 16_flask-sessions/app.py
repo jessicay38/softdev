@@ -1,9 +1,9 @@
-# Jessica Yu, Chloe Wong, Stella Yampolsky
-# :(
+# Jessica Yu, Stella Yampolsky, Tracey Ye
+# JST
 # SoftDev
-# K15 - Displaying user input with flask
-# October 8, 2024
-# Time Spent: 30 minutes
+# K16 - Building on K15 with user logout
+# October 9, 2024
+# Time Spent: 
 
 # import conventions:
 # list most general first (standard python library)
@@ -47,7 +47,7 @@ def disp_loginpage():
     return render_template( 'login.html' )
 
 
-@app.route("/auth", methods = ['GET', 'POST']) # , methods=['GET', 'POST'])
+@app.route("/auth") # , methods=['GET', 'POST'])
 def response():
     return render_template('response.html', response = request.args['username'], method = request.method) #response to a form submission
 
