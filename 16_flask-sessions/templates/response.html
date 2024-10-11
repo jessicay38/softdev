@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <!-- 
-  Jessica Yu, Stella Yampolsky, Tracey Ye
-  JST
+  Jessica Yu
   SoftDev
-  K16 - Building on K15 with user logout
-  2024-10-9
-  Time Spent: 
+  Oct 09, 2024
  -->
-
-<html>
+ 
+ <html>
 
   <head>
-    <title>Welcome!</title>
+    <title> method </title>
     <style>
-      th {
-        font-weight: normal;
-      }
+        body {
+            transform: translate(10%, 90%)
+        }
+        .d1 {
+            font-size: 30px;
+            transform: translate(-10%, 0%)
+        }
+        .d2 {
+            font-size: 20px;
+        }
+        .d3 {
+            font-size: 15px;
+        }
     </style>
   </head>
 
   <body>
-    <h1>JST Jessica Yu, Stella Yampolsky, Tracey Ye</h1>
-    <h2>Hi, {{ response }}!</h2>
-    <h3>Request Method: {{ method }}</h3>
+      <div class='d1'>
+          <center>You inputted: {{ r }}</center><br><br>
+      </div>
+
+      <div class='d2'>
+          {% if method == "GET" %} How does GET work?<br> {% endif %}
+          {% if method == "POST" %} How does POST work?<br> {% endif %}
+      </div>
+
+      <div class='d3'>
+          {% if method == "GET" %}
+              <br>- GET the is the default for form responses ( you can specify with method='GET' )
+              <br>- Use request.args['key'] to return the user's input
+              <br>- GET is considered less safe because it displays the information in the URL
+              <br>--------> "?" marks the start of query objects for GET
+              <br>--------> key=value or key=value&ect=ect... often follows
+          {% endif %}
+          {% if method == "POST" %}
+              <br>- POST is specified with method='POST' )
+              <br>- Use request.form['key'] to return the user's input
+              <br>- POST is considered more safe than GET because it hides the information in the background, but it is still NOT safe
+          {% endif %}
+      </div>
+      
+      <div class='d4'>
+          <br><br>
+          <form action="/">
+              <input type="submit" value="Return Home">
+          </form>
+          <form action="/logout">
+              <input type="submit" value="Log Out">
+          </form>
+      </div>
   </body>
-
-  <table border="2">
-    <tr>
-      <th><b>GET</b></th>
-      <th><b>POST</b></th>
-    </tr>
-    <tr>
-      <th>Response transmitted through url</th>
-      <th>Response transmitted behind the scenes</th>
-    </tr>
-    <tr>
-      <th>Limited in size</th>
-      <th>Unlimited in size</th>
-    </tr>
-    <tr>
-      <th>Response visible in url</th>
-      <th>Response not visible in url</th>
-    </tr>
-  </table> 
-
+ 
 </html>
-

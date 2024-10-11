@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <!-- 
-  Jessica Yu, Stella Yampolsky, Tracey Ye
-  JST
+  Jessica Yu
   SoftDev
-  K16 - Building on K15 with user logout
-  2024-10-9
-  Time Spent: 
+  Oct 09, 2024
  -->
-
 
 <html>
 
   <head>
-    <title> LOGIN PAGE </title>
+    <title> greetings </title>
+    <style>
+        body {
+            transform: translate(0%, 80%);
+        }
+        .d1 {
+            font-size: 17px;
+        }
+        .d2 {
+            font-size: 13px;
+        }
+    </style>
   </head>
 
-  <body>
-    <h1>JST Jessica Yu, Stella Yampolsky, Tracey Ye</h1>
-    <h2>Howdy, friends!</h1>
+  <body><center>
+    <h1>
+      Morning, devo! 
+    </h1>
+    
+    <div class = 'd1'>
+        NewTrio??
+        <br>
+    </div>
+    
+    <div class = 'd2'>
+        Tracy, Stella, Jessica
+    </div>
+
     <h3>
-      Enter your username below to proceed.
+      Want to know more about GET and POST?
     </h3>
-    <form action="/auth">
+    <form action="/resp" method="GET">
       <input type="text" name="username">
-      <input type="submit" name="sub1">
+      <input type="submit" value="Submit Via Get">
     </form>
     <br>
-  </body>
-
+    <form action="/resp" method="POST">
+      <input type="text" name="username">
+      <input type="submit" value="Submit Via Post">
+    </form>
+    <br><br><br>
+  </center></body>
+     <h>
+   
+     
+    </h>
 </html>
-
