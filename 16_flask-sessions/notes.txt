@@ -1,21 +1,18 @@
-< your heading here >
+# Jessica Yu
+# JST
+# K16 - Building onto the flask website 
+# SoftDev
+# Oct 09, 2024
+# Time Spent: 
 
 DISCO:
-* 
+* Cookies stores usernames and the sessions of those usernames
 * 
 * 
 -----------------------------------------------------------------------
-
 
 Q/C/C:
-* 
-* 
-* 
------------------------------------------------------------------------
-
-
-OTHER?
-* 
+* How are we supposed to implement cookies?
 * 
 * 
 -----------------------------------------------------------------------

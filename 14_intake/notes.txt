@@ -1,25 +1,20 @@
-< your heading here >
+# Jessica Yu 
+# JST
+# SoftDev
+# October 7, 2024
+# Time Spent: 40 minutes
 
 DISCO:
-* 
-* 
-* 
+* Uncommenting the get and post methods return an error if you don't delete the first closing paranthesis
+* args takes in the inputted data, which is username here
+* requesting for request.args['username'] twice caused an error
 -----------------------------------------------------------------------
 
 
 Q/C/C:
-* 
-* 
-* 
+* What do the get and post methods mean? What do they do?
+* How come there is no error when the request.args['username'] is commented out?
 -----------------------------------------------------------------------
-
-
-OTHER?
-* 
-* 
-* 
------------------------------------------------------------------------
-
 
 
 

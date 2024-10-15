@@ -1,23 +1,15 @@
-< your heading here >
+# Jessica Yu
+# :(
+# SoftDev
+# K15 - Displaying user input with flask
+# October 8, 2024
+# Time Spent: 30 minutes
+
 
 DISCO:
-* 
-* 
-* 
------------------------------------------------------------------------
-
-
-Q/C/C:
-* 
-* 
-* 
------------------------------------------------------------------------
-
-
-OTHER?
-* 
-* 
-* 
+* You can save the response to the username by equating a variable to request.args['username']
+* action="/__" allows you to switch between html files on the website
+* Request.method returns the request method used
 -----------------------------------------------------------------------
 
 
