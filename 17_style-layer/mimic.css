@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: #8A9189;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: #BBC0BA;
+  font-weight: bold;
+}
+
+h2 {
+  color: black;
+  text-align: left;
+}
+
+#left {
+     color: white;
+     text-align: left;
+     background-color: #BBC0BA;
+}
+
+#right {
+     color: white;
+     text-align: right;
+     background-color: #BBC0BA;
+}
+
+p {
+    color: black;
+    text-align: right;
+}
+  
+
+  
+    
