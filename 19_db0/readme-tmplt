@@ -7,7 +7,7 @@
 
 DISCOVERIES:
 ----------------------------------------------------
-* a thing
+* You can specify the type of character put into each column of the table
 * another thing
 * ...and more
 ====================================================
@@ -15,7 +15,7 @@ DISCOVERIES:
 
 QUESTIONS/COMMENTS/CONCERNS:
 ----------------------------------------------------
-Q: a question
+Q: How do you insert the data from the csv file into the sqlite table?
 Q: another question
 C: a comment or concern
 ====================================================

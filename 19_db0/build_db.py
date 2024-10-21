@@ -18,24 +18,33 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 
 """
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~s~~~~~~~~~~~~~~~~~~~~~~~~
 < < < INSERT YOUR TEAM'S DB-POPULATING CODE HERE > > >
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
-CREATE TABLE students (
-    name TEXT PRIMARY KEY,
-    id INTEGER NOT NULL UNIQUE
-)
+dict = []
+with open("course.csv", newline = '') as file:
+    courses = csv.DictReader(file)
+    for i in courses:
+        dict.append(i)
 
-insert into students values();
+c.execute("CREATE TABLE course (code TEXT, mark INTEGER, id INTEGER)")
+for row in dict:
+    v = "(" + (row.get("code")) + ", " + (row.get("mark")) + ", " + (row.get("id")) + ")"
 
-CREATE TABLE courses (
-    course_name TEXT PRIMARY KEY,
-    grade INTEGER,
-    id INTEGER NOT NULL UNIQUE
-)
+    c.execute(f'INSERT INTO course (code, mark, id) VALUES {v}')
 
-insert into courses values();
+with open("students.csv", newline = '') as file:
+    students = csv.DictReader(file)
+    for i in students:
+        dict.append(i)
+
+c.execute("CREATE TABLE roster (name TEXT, age INTEGER, id INTEGER)")
+for row in dict:
+    v = "(" + (row.get("name")) + ", " + (row.get("age")) + ", " + (row.get("id")) + ")"
+
+    c.execute(f'INSERT INTO roster (name, age, id) VALUES {v}')
+
 
 command = ""          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)    # run SQL statement
