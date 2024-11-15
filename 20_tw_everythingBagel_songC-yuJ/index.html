@@ -1,3 +1,12 @@
+<!--
+Claire Song, Jessica Yu
+Everything Bagel
+SoftDev
+K20 -- Bootstrap From the Foundation on up, with a Tailwind...
+2024-11-14
+Time Spent: 1
+-->
+
 <!doctype html>
 <html class="scroll-smooth">
 <head>
@@ -145,5 +154,41 @@
     <input type="text" placeholder="Search" class="...">
   </div>
   <br></br>
+  <!--You can surround a div with a rounded border-->
+  <div class="border-4 border-sky-700/75 rounded-lg p-8 text-center">
+    <!--You can create buttons with different cursors and rings around them when hovered-->
+    <button class="border-2 border-slate-300 bg-slate-50 hover:ring-2 ring-blue-400 rounded-lg m-4 p-1 cursor-wait">Hover over this button</button>
+    <button class="border-2 border-slate-300 bg-slate-50 hover:ring-2 ring-violet-400 rounded-lg m-4 p-1 cursor-text">And this button</button>
+    <button class="border-2 border-slate-300 bg-slate-50 hover:ring-2 ring-fuchsia-400 rounded-lg m-4 p-1 cursor-not-allowed">And this button</button>
+  </div>
+  <div class="grid grid-cols-3 divide-x text-center bg-teal-200">
+    <div class="p-10">It</div>
+    <!--This rotates the hue of the background of a div-->
+    <div class="backdrop-hue-rotate-60 p-10">changes</div>
+    <div class="backdrop-hue-rotate-180 p-10">colors!!!</div>
+  </div>
+  <hr>
+  <div class="flex flex-row p-10">
+    <!--This creates a div that changes sizes when hovered-->
+    <div class="basis-1/4 hover:basis-1/2">Hover here</div>
+    <div>It moves!</div>
+  </div>
+  <hr>
+  <!--This creates a div that changes colors when clicked on-->
+  <div class="p-10 text-center active:bg-teal-500">
+    <p>Click here</p>
+  </div>
+  <hr>
+  <div class="m-12">
+    <h1 class="text-3xl font-bold underline">A Very Cool List</h1>
+    <!--This creates a list with custom bullet points-->
+    <ul class="list-image-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTRZzYFM417cB-rVskqgPgCnnO68na12NJQ&s)]">
+      <li>Look</li>
+      <li>At</li>
+      <li>These</li>
+      <li>Bullet</li>
+      <li>Points!</li>
+    </ul>
+  </div>
 </body>
 </html>
