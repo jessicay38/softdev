@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-50">
+
+  <div class="shadow-xl shadow-sky-500/50 rounded-lg bg-gradient-to-r from-blue-500 from-20% via-sky-500 via-40% to-violet-300 to-80% box-border h-50 w-50 p-4 border-4 border-t-4 border-white-500">
+    <!-- There's many ways to customize your sections.
+    shadow-xl: casts a large shadow
+    shadow-sky-500/50: colors the shadow
+    rounded-lg: rounds the corners
+    bg-gradient-to-r from-blue-500...to-80%: makes a gradient with different colors
+    box-border: adds a border:
+    h-50: height
+    w-50: width
+    p-4: size of section
+    border-t-4 border-t-4 border-white-500: customizes border width and color -->
+  <h1 class="select-none text-center text-3xl font-bold underline underline-offset-2 cursor-pointer">
+    <!-- cursor-pointer: changes cursor to a pointer when over that text -->
+    To-Do list
+    <h2 class="text-center">
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Wake Up
+        <!-- accent-blue-500: gives the checkmark a color -->
+      </label>
+      <br></br>
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Eat breakfast
+      </label>
+      <br></br>
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Go to school
+      </label>
+      <br></br>
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Attend clubs
+      </label>
+      <br></br>
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Go home
+      </label>
+      <br></br>
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Eat dinner
+      </label>
+      <br></br>
+      <label>
+        <input type="checkbox" class="accent-blue-500" checked> Sleep
+      </label>
+      <h2>
+</div>
+<br></br>
+<div class="flex justify-center items-center">
+<h3 class="text-center">
+  <table class="border-separate border-spacing-1 border border-gray-700 table-auto">
+    <thead>
+      <tr>
+        <th class="border border-gray-700">Other things I've done</th>
+        <th class="border border-gray-700">Places I've done them</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-700">Touch grass</td>
+        <td class="border border-gray-700">The Park</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-700">Eaten dinner</td>
+        <td class="border border-gray-700">McDonalds</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-700">Fed Cows</td>
+        <td class="border border-gray-700">Farm</td>
+      </tr>
+    </tbody>
+  </table>
+  <br></br>
+  <button class="rounded-full bg-sky-500 hover:bg-blue-700 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-150 hover:bg-indigo-500 duration-300">
+    <!-- rounded-full: rounds the edges
+        hover:bg-blue-700: changes the color of the button when hovered over
+        transition ease-in-out: transition type
+        hover:scale-150: how large the button gets once hovered over
+        duration-300: how long the effect lasts
+    -->
+    Hover over this button
+  </button>
+  <br></br>
+  <button class="rounded-full bg-orange-500 hover:bg-red-700 transition ease-in-out delay-150 bg-red-500 hover:-translate-y-1 hover:scale-50 hover:bg-yellow-500 duration-150">
+    Hover over this button too
+  </button>
+</h3>
+</div>
+<br></br>
+<hr>
+  <div class="columns-2 text-center">
+    <p>Well, let me tell you something, ...</p>
+    <p class="break-after-column">Sure, go ahead, laugh...</p>
+    <!-- break-after-column: breaks the text into a new colymn right after the next inputted text -->
+    <p>Maybe we can live without...</p>
+    <p>Look. If you think this is...</p>
+  </div>
+  <br></br>
+  <hr>
+  <br></br>
+  <div class="columns-3 text-center">
+    <p>Well, let me tell you something, ...</p>
+    <p class="break-before-column">Sure, go ahead, laugh...</p>
+    <!-- break-before-column: breaks the text into a new column before the next inputted text -->
+    <p>Maybe we can live without...</p>
+    <p>Look. If you think this is...</p>
+  </div>
+  <hr>
+  <div class="text-center">
+      <span class="box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">
+        Helloooooooooo<br />
+        Whats up
+      </span>
+      <p class="font-sans">The pigs rolls in the mud</p>
+      <p class="font-serif">The pigs rolls in the mud</p>
+      <p class="font-mono">The pigs rolls in the mud</p>
+      <p class="text-sm underline decoration-solid">The pigs rolls in the mud</p>
+      <p class="text-base underline decoration-double">The pigs rolls in the mud</p>
+      <p class="text-lg underline decoration-dotted">The pigs rolls in the mud</p>
+      <p class="text-xl underline decoration-dashed">The pigs rolls in the mud</p>
+      <p class="text-2xl underline decoration-wavy">The pigs rolls in the mud</p>
+      <!-- different fonts, text sizes, and underlines that you can use -->
+      <br></br>
+      <select>
+        <option>Yes</option>
+        <option>Yesss</option>
+        <option>Yesssss</option>
+      </select>
+      <!-- gives you a bunch of options to choose from -->
+    </div>
+    <br></br>
+    <div class="relative text-center">
+    <div class="absolute pointer-events-auto ...">
+      <svg class="absolute text-slate-400 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+      </svg>
+    </div>
+    <input type="text" placeholder="Search" class="...">
+  </div>
+  <br></br>
+</body>
+</html>
