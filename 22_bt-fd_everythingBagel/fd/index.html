@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!--
+Claire Song, Jessica Yu
+Everything Bagel
+SoftDev
+K20 -- Testing On-Ramps + Other FEFs
+2024-11-18
+Time Spent: 1
+-->
+
+<html>
+  <head>
+    <meta charset = "utf-8" />
+    <meta http-equiv = "x-ua-compatible" content = "ie = edge" />
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js"></script>
+  </head>
+
+  <body>
+    <hr>
+    <div class="top">
+      <div class="top-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <h2 class="menu-text text-center">Everything Bagel!!</h2>
+        </div>
+        <hr>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search for more bagels!"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+      </div>
+      <br></br>
+      <ul class = "accordion" data-accordion role = "tablist">
+       <li class = "accordion-item is-active">
+          <a href = "#collapse1" role = "tab" class = "accordion-title" id = "collapse1-heading"> Keep Scrolling...</a>
+          <div id = "collapse1" class = "accordion-content" role = "tabpanel" data-tab-content aria-labelledby = "panel1d-heading">
+              if you want...
+          </div>
+       </li>
+
+       <li class = "accordion-item">
+          <a href = "#collapse3" role = "tab" class = "accordion-title" id = "collapse3-heading">for more bagels!</a>
+          <div id = "collapse3" class = "accordion-content" role = "tabpanel" data-tab-content aria-labelledby = "panel1d-heading">
+             yum yum yum
+          </div>
+       </li>
+    </ul>
+    </body>
+    <a class="button expanded" href="#">Do you want to learn more about the different types of bagels?</a>
+    <div class="text-center">
+    <h2 class="secondary button">Plain Bagel</h2>
+     <button class="button" data-open="exampleModal1">Learn more!</button>
+     <div class="reveal" id="exampleModal1" data-reveal>
+        <h1>Just a plain bagel</h1>
+        <p>What did you expect...</p>
+        <button class="close-button" data-close aria-label="Close modal">&times;</button>
+     </div>
+     <h2 class ="success button">Sesame Bagel</h2>
+      <button class="button" data-open="exampleModal2">Learn more!</button>
+      <div class="reveal" id="exampleModal2" data-reveal>
+         <h1>Just a plain bagel</h1>
+         <p>but with sesames!</p>
+         <button class="close-button" data-close aria-label="Close modal">&times;</button>
+      </div>
+      <h2 class="warning button">Everything Bagel</h2>
+       <button class="button" data-open="exampleModal3">Learn more!</button>
+       <div class="reveal" id="exampleModal3" data-reveal>
+          <h1>The best bagel!</h1>
+          <p>No argument here</p>
+          <button class="close-button" data-close aria-label="Close modal">&times;</button>
+       </div>
+     </div>
+     <hr>
+     <div class="text-center">
+       <h2 class="secondary button">Raisin Bagel</h2>
+        <button class="button" data-open="exampleModal4">Learn more!</button>
+        <div class="reveal" id="exampleModal4" data-reveal>
+           <h1>A plain bagel but</h1>
+           <p>it has raisins :D</p>
+           <button class="close-button" data-close aria-label="Close modal">&times;</button>
+        </div>
+        <h2 class="success button">Rainbow Bagel</h2>
+         <button class="button" data-open="exampleModal5">Learn more!</button>
+         <div class="reveal" id="exampleModal5" data-reveal>
+            <h1>A very very very</h1>
+            <p>very very colorful bagel</p>
+            <button class="close-button" data-close aria-label="Close modal">&times;</button>
+         </div>
+       </div>
+       <hr>
+         <br></br>
+         <div class="text-center">
+          <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#">Choose your favorite bagel!</a>
+            <ul class="menu">
+              <li><a href="#">Plain bagel</a></li>
+              <li><a href="#">Sesame bagel</a></li>
+              <li><a href="#">Everything bagel</a></li>
+              <li><a href="#">Raisin bagel</a></li>
+              <li><a href="#">Rainbow bagel</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Yum</a></li>
+          <li><a href="#">Yumm</a></li>
+          <li><a href="#">Yummm</a></li>
+        </ul>
+      </div>
+      <br></br>
+      <button class="button expanded">Hope you enjoyed reading about bagels!</button>
+     <script>
+        $(document).ready(function() {
+           $(document).foundation();
+        })
+     </script>
+
+
+</html>
