@@ -16,8 +16,8 @@ def nasa():
     with open("key_nasa.txt", "r") as file:
         key = file.read()
     request = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=' + key)
+    hdurl =
     page_content = json.loads(request.read())
-    "hdurl": "https://apod.nasa.gov/apod/image/2411/LDN1105ElephantTrunk2048.jpg"
     return render_template('main.html', explanation = page_content["explanation"], image = page_content["hdurl"])
 
 if __name__ == "__main__":
