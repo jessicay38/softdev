@@ -6,7 +6,7 @@
 
 import urllib.request
 import json
-from flask import Flask
+from flask import Flaskz
 from flask import render_template
 
 app = Flask(__name__)
