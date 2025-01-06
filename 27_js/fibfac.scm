@@ -1,3 +1,4 @@
+#lang racket
 (define fact
   (lambda (n)
     (if (= n 1)
