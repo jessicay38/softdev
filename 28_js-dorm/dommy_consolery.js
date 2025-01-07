@@ -1,6 +1,6 @@
 /*
   your PPTASK:
-  
+
   First, familiarize yourself with the given html file for this work.
 
       then...
@@ -12,15 +12,15 @@
   or otherwise deem notable.
 
   Have the given html file open as you work.
-  
+
   Write with your future self or teammates in mind.
-  
-  If you find yourself falling out of flow mode, consult 
+
+  If you find yourself falling out of flow mode, consult
   - other teams
   - MDN
 
   A few comments have been pre-filled for you...
-  
+
   (delete this block comment once you are done)
 */
 
@@ -28,7 +28,7 @@
 
 
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
+// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
 // SoftDev pd0
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2025-01-07t
@@ -52,7 +52,7 @@ var f = function(x) //You can use the variable by calling f(x)
 
 
 //instantiate an object
-var o = { 'name' : 'Thluffy',
+var o = { 'name' : 'Thluffy', //It returns an object and descriptions of it
           age : 1024,
           items : [10, 20, 30, 40],
           morestuff : {a : 1, b : 'ayo'},
@@ -102,9 +102,34 @@ var stripe = function()
 
 //insert your implementations here for...
 // FIB
+
+var fact = function(n){
+    if(n == 1){
+      return 1;
+    }
+      return (n*fact(n-1));
+  }
+
 // FAC
+
+var fib = function(n){
+    if(n == 0){
+      return 0;
+    }
+      if(n == 1){
+      return 1;
+    }
+    return fib(n-1)+fib(n-2);
+  }
+
 // GCD
 
+var gcd = function(a, b) {
+    if (b == 0) {
+      return a;
+    }
+    return gcd(b, a % b);
+}
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
@@ -113,5 +138,3 @@ const myFxn = (param1, param2) => {
     // body
     return retVal;
 };
-
-

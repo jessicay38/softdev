@@ -1,6 +1,6 @@
 DISCO ::
 ---
-
+- You need to click enter and shift at the same time to start a new line
 
 ---
 
