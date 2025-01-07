@@ -1,0 +1,14 @@
+Team TJMax :: Jessica Yu, Tracy Ye
+SoftDev pd5
+K27 - Basic functions in JavaScript
+2025-01-06m
+
+DISCO ::
+- You can open the Dev Console on java using ctrl+shift+K
+- javascript uses java syntax
+-
+
+QCC ::
+- 
+-
+-
