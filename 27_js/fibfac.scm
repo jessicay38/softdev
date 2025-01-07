@@ -1,4 +1,4 @@
-;GG/2 :: Jessica Yu, Tracy Ye
+;Team TJMax :: Jessica Yu, Tracy Ye
 ;SoftDev pd5
 ;K27 - Basic functions in JavaScript
 ;2025-01-06m
