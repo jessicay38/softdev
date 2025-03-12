@@ -1,7 +1,9 @@
 DISCO:
 - Using just a flask file and the prompt gives a basic implementation but it uses a lot of non-ideal libraries
 - It tells you what other repositories it's drawing inspiration from
-- First attempt sort of works, it lets an user create stories, add stories, but you can't see the full story and you can't see other people's stories
+- First attempt sort of works, it lets an user create stories, add stories, but you can't see the full story and you can't see other people's stories 
+- Sometimes it does side by side 
+- It's much slower than ChatGBT 
 
 Q/C/C:
 some areas of interest...
