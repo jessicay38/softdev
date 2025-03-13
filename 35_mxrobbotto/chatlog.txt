@@ -1,9 +1,1015 @@
+# Jessica Yu, Victor Casado
+#
+# SoftDev
+# K35 - 
+# march 13, 2025
+# Time Spent: 
+
+P00: Half-Quick Move Slowly and Fix Things
+Due: 2024-11-07r 08:00EST
+
+Imagine:
+
+_Your team advertises proficiency with Flask, Python, and SQLite. Your team has been contracted to design and implement a newfangled webapp called a "wiki."_
+
+Imagine one of these scenarios:
+
+Scenario One: Your team has been contracted to create a collaborative storytelling game/website, with the following features:
+
+    Users will have to register to use the site.
+    Logged-in users can either start a new story or add to an existing story.
+    When adding to a story,
+        Users are shown only the latest update to the story, not the whole thing.
+        A user can then add some amount of text to the story.
+    Once a user has added to a story, they cannot add to it again.
+    When creating a new story,
+        Users get to start with any amount of text and give the story a title.
+        Logged in users will be able to read any story they have contributed to on their homepage (the landing page after login).
+
+Scenario Two: Your team has been contracted to create a web log hosting site, with the following features:
+
+    Users will have to register to use the site.
+    A logged-in user will be able to
+        Create a new blog
+        Update their blog by adding a new entry
+        View and edit their own past entries
+        View the blogs of other users
+
+Your "software solution," to use the parlance of our times, will incorporate a few distinct components, so it is imperative that your team develop a design before taking any further steps.
+
+Your team's first order of business is reaching agreement as to how your project will be organized and how you will divide work. It will be imperative that each teammate a) shares the same organizational model of your target, and b)
+understands how they and their work will fit into it.
+
+Enter the design document. Design by next class session.
+
+(Nota bene: This is your only deliverable for next class. All your efforts should be directed to doing this job well.)
+Design Document Specifications:
+
+    A list of program components with role of each specified. (e.g., a car engine is comprised of various components: carburetor, alternator, radiator, spark plugs, etc. Each must perform its role for the engine to do its overall job.)
+    Explanation of how each component relates to the others.
+        Component map visualizing relationships between components.
+    Database Organization (tables? Relationships b/t tables? etc.)
+    Site map for front end
+        Represent each page you envision for your site.
+        Show linkages conveying all possilbe pathways for a user traversing site.
+    A breakdown of the different tasks required to complete this project
+        Include assignments of each task to each group member
+    Append this line to your heading: TARGET SHIP DATE: {yyyy-mm-dd}
+    Amalgamate these components into a single PDF, store in designated location.
+
+Project Guidelines:
+
+    Flask will serve as your web server/delivery framework.
+    SQLite3 will serve as your backend data storage system.
+        As you grown your "sql-fu", always start with Devo Knowledge Base (QAF, n&c) and primary documentation. (...and if none of these have the answer you seek, and you find a SO post that is actually useful, or any other diamond in the rough of the Intertrash, add it to Devo KB)
+        Get creative, think boldly, get your hands dirty as you experiment via the sqlite3 shell and see what works/sticks...
+    Multiple Python files should be used, as necessary, for application layer. (a.k.a. "middleware" modules, etc.)
+    CSS: You may provide your own IFF...
+        your site is fully functional with CSS is stripped away.
+        you store it in the appropriate location for flask to use it.
+        it is all written by you
+    Use Q&A forum liberally. "A rising tide lifts all boats."
+    Reminder: include heading as comment in all source files.
+    Platinum Rule: THOUST APP SHALT NOT FAIL.
+
+Your website will incorporate a few distinct components, so it is imperative that your team develop a design and agree upon roles before you move to implementation.
+
+You will need a DEVLOG for this project.
+
+    Devlog allows any group member at any time to see the current state of the project.
+    PM will make sure devlog is being maintained, but will not make all entries.
+    The devlog should be a plain text file, stored in the specified location.
+    When any team member stops working and pushes changes to github, they should update the devlog explaining what changes have been made. Include errors/bugs discovered (or created).
+    Separate devlog entries with a newline.
+    Most recent entry at the bottom.
+    Each entry should begin with the following format: firstL -- TIMESTAMP\n ( e.g.: topherM -- 1999-12-31 23:59 )
+
+FINAL DELIVERABLES (watch this section for updates):
+
+    hardcopy:
+        final version of design doc (x1)
+        staple because it indicates "you have it together"
+    repo structure:
+
+app/
+    __init__.py
+    static/
+        css/          ( O P T I O N A L )
+    templates/
+design.pdf
+devlog.txt
+flag.jpg
+README.md
+requirements.txt
+
+    README.md
+        Clearly visible at top: <Project Name> by <Team Name>
+        Roster with roles
+        Description of website/app (a la abstract of a scientific paper... NOT your entire design doc!)
+        Install guide:
+            How to clone/install.
+        Launch codes:
+            How to run.
+    design.pdf
+        Latest/current version of your design document.
+        Revisions since v0 noted/explained in devlog.
+    requirements.txt
+        It will list flask as well as any other pip installs your app requires.
+        Latest version of all packages.
+        Clearance must be sought and granted for any modules/libraries not explicitly covered in class.
 
 
-DISCO:
+complete this assignment
 
-Q/C/C:
-some areas of interest...
-q0: How many tries did it take to "get it right?"
-q1: Did you catch any errors? If so, how did you notice, and what did you do?
-q2:
+To complete this assignment, you need to follow a systematic approach to design and implement the web application as described. Here is a step-by-step guide:
+1. Create the Design Document
+a. List of Program Components
+
+    User Authentication Module: Handle user registration and login.
+    Story/Blog Management Module: Allow users to create, update, and view stories or blog entries.
+    Database Module: Manage SQLite database interactions.
+    Frontend Module: Handle the user interface, including templates and CSS.
+
+b. Explanation of Component Relationships
+
+    User Authentication Module interacts with the Database Module to store and retrieve user credentials.
+    Story/Blog Management Module interacts with the Database Module to store and retrieve story/blog data.
+    Frontend Module interacts with all other modules to display data and manage user interactions.
+
+c. Component Map
+
+Create a visual representation showing the interactions between components.
+d. Database Organization
+
+    Users Table: Store user information (username, password, etc.).
+    Stories/Blogs Table: Store story/blog entries, including title, content, author, etc.
+    Contributions Table: Store user contributions to stories.
+
+e. Site Map
+
+Create a visual representation of all the pages in your site and show how users can navigate between them.
+f. Task Breakdown and Assignment
+
+List all tasks required to complete the project and assign each task to a team member.
+2. Develop the Application
+a. Set Up Flask
+
+    Create a Flask project structure.
+    Implement user authentication using Flask-Login.
+    Implement story/blog management features.
+
+b. Set Up SQLite Database
+
+    Define the database schema.
+    Implement database interactions using SQLAlchemy or a similar ORM.
+
+c. Implement Frontend
+
+    Create HTML templates using Jinja2.
+    Add CSS for styling (optional, must work without CSS).
+
+3. Maintain the Devlog
+
+    Create a devlog.txt file.
+    Ensure each team member updates the devlog with changes, errors, and bugs.
+
+4. Final Deliverables
+a. Hardcopy
+
+    Print and staple the final design document.
+
+b. Repo Structure
+
+Ensure the repository has the following structure:
+Code
+
+app/
+    __init__.py
+    static/
+        css/          ( O P T I O N A L )
+    templates/
+design.pdf
+devlog.txt
+flag.jpg
+README.md
+requirements.txt
+
+c. README.md
+
+Include the project name, team name, team roster, description, installation guide, and launch instructions
+Message interrupted
+Copilot was interrupted before it could finish this message.
+can you make the __init__.py file with no static stuff
+
+Here is a basic __init__.py file for a Flask application without any static files:
+Python
+
+from flask import Flask
+
+app = Flask(__name__)
+
+# Import and register blueprints here
+# from .views import main as main_blueprint
+# app.register_blueprint(main_blueprint)
+
+@app.route('/')
+def index():
+    return "Hello, World!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+This file sets up a simple Flask application with a single route that returns "Hello, World!". You can expand this by adding blueprints, more routes, and other necessary components as your project requirements grow.
+our team has been contracted to create a collaborative storytelling game/website, with the following features:
+
+    Users will have to register to use the site.
+    Logged-in users can either start a new story or add to an existing story.
+    When adding to a story,
+        Users are shown only the latest update to the story, not the whole thing.
+        A user can then add some amount of text to the story.
+    Once a user has added to a story, they cannot add to it again.
+    When creating a new story,
+        Users get to start with any amount of text and give the story a title.
+        Logged in users will be able to read any story they have contributed to on their homepage (the landing page after login).
+
+
+using just a init.py file and html templates, can you complete this
+
+Here is a basic implementation using __init__.py and HTML templates to create a collaborative storytelling website with the specified features:
+Project Structure
+Code
+
+app/
+    __init__.py
+    templates/
+        base.html
+        index.html
+        login.html
+        register.html
+        new_story.html
+        add_to_story.html
+        homepage.html
+
+Public code references from 1 repository
+
+__init__.py
+Python
+
+from flask import Flask, render_template, redirect, url_for, request, flash, session
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True, nullable=False)
+    password = db.Column(db.String(60), nullable=False)
+    stories = db.relationship('Story', backref='author', lazy=True)
+    contributions = db.relationship('Contribution', backref='contributor', lazy=True)
+
+class Story(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    contributions = db.relationship('Contribution', backref='story', lazy=True)
+
+class Contribution(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    story_id = db.Column(db.Integer, db.ForeignKey('story.id'), nullable=False)
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = bcrypt.generate_password_hash(request.form['password']).decode('utf-8')
+        user = User(username=username, password=password)
+        db.session.add(user)
+        db.session.commit()
+        flash('Account created!', 'success')
+        return redirect(url_for('login'))
+    return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = User.query.filter_by(username=username).first()
+        if user and bcrypt.check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for('homepage'))
+        else:
+            flash('Login Unsuccessful. Please check username and password', 'danger')
+    return render_template('login.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+@app.route('/homepage')
+@login_required
+def homepage():
+    stories = Story.query.filter_by(user_id=current_user.id).all()
+    return render_template('homepage.html', stories=stories)
+
+@app.route('/new_story', methods=['GET', 'POST'])
+@login_required
+def new_story():
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        story = Story(title=title, content=content, author=current_user)
+        db.session.add(story)
+        db.session.commit()
+        return redirect(url_for('homepage'))
+    return render_template('new_story.html')
+
+@app.route('/add_to_story/<int:story_id>', methods=['GET', 'POST'])
+@login_required
+def add_to_story(story_id):
+    story = Story.query.get_or_404(story_id)
+    if request.method == 'POST':
+        content = request.form['content']
+        contribution = Contribution(content=content, contributor=current_user, story=story)
+        db.session.add(contribution)
+        db.session.commit()
+        return redirect(url_for('homepage'))
+    latest_contribution = Contribution.query.filter_by(story_id=story.id).order_by(Contribution.id.desc()).first()
+    return render_template('add_to_story.html', story=story, latest_contribution=latest_contribution)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+Public code references from 30 repositories
+
+2 vulnerabilities detected
+
+HTML Templates
+base.html
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storytelling Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                <a href="{{ url_for('homepage') }}">My Stories</a>
+                <a href="{{ url_for('new_story') }}">New Story</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
+
+Public code references from 15 repositories
+
+index.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to the Storytelling Website</h1>
+<p>Please <a href="{{ url_for('register') }}">register</a> or <a href="{{ url_for('login') }}">login</a> to participate.</p>
+{% endblock %}
+
+Public code references from 11 repositories
+
+register.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Register</h2>
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
+
+Public code references from 18 repositories
+
+login.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Login</h2>
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+{% endblock %}
+
+Public code references from 15 repositories
+
+new_story.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Create New Story</h2>
+<form method="POST">
+    <label for="title">Story Title:</label>
+    <input type="text" name="title" required>
+    <label for="content">Story Content:</label>
+    <textarea name="content" required></textarea>
+    <button type="submit">Create Story</button>
+</form>
+{% endblock %}
+
+Public code references from 16 repositories
+
+add_to_story.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Add to Story: {{ story.title }}</h2>
+<p>Latest Contribution: {{ latest_contribution.content }}</p>
+<form method="POST">
+    <label for="content">Your Contribution:</label>
+    <textarea name="content" required></textarea>
+    <button type="submit">Add to Story</button>
+</form>
+{% endblock %}
+
+Public code references from 13 repositories
+
+homepage.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>My Stories</h2>
+<ul>
+    {% for story in stories %}
+        <li>{{ story.title }} - <a href="{{ url_for('add_to_story', story_id=story.id) }}">Add to Story</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+Public code references from 14 repositories
+
+This basic implementation covers user registration, login, story creation, and adding to existing stories. You can expand and enhance this structure according to your project requirements.
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+import sqlite3
+import db
+import os
+import os.path
+
+
+only allowed to import those libraries
+
+Given the constraints, we will create a basic Flask application using only the allowed libraries (Flask, render_template, request, redirect, url_for, session, flash, sqlite3, db, os, os.path).
+
+Here’s the __init__.py file along with the necessary HTML templates to create a collaborative storytelling website:
+Project Structure
+Code
+
+app/
+    __init__.py
+    templates/
+        base.html
+        index.html
+        login.html
+        register.html
+        new_story.html
+        add_to_story.html
+        homepage.html
+
+Public code references from 3 repositories
+
+__init__.py
+Python
+
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+import sqlite3
+import os
+import os.path
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+
+# Initialize the database
+def init_db():
+    if not os.path.exists('site.db'):
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('''CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)''')
+            c.execute('''CREATE TABLE stories (id INTEGER PRIMARY KEY, title TEXT, content TEXT, user_id INTEGER)''')
+            c.execute('''CREATE TABLE contributions (id INTEGER PRIMARY KEY, content TEXT, user_id INTEGER, story_id INTEGER)''')
+            conn.commit()
+
+init_db()
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
+            conn.commit()
+        flash('Account created!', 'success')
+        return redirect(url_for('login'))
+    return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
+            user = c.fetchone()
+            if user:
+                session['user_id'] = user[0]
+                session['username'] = user[1]
+                return redirect(url_for('homepage'))
+            else:
+                flash('Login Unsuccessful. Please check username and password', 'danger')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
+@app.route('/homepage')
+def homepage():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    user_id = session['user_id']
+    with sqlite3.connect('site.db') as conn:
+        c = conn.cursor()
+        c.execute('SELECT * FROM stories WHERE user_id = ?', (user_id,))
+        stories = c.fetchall()
+    return render_template('homepage.html', stories=stories)
+
+@app.route('/new_story', methods=['GET', 'POST'])
+def new_story():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        user_id = session['user_id']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('INSERT INTO stories (title, content, user_id) VALUES (?, ?, ?)', (title, content, user_id))
+            conn.commit()
+        return redirect(url_for('homepage'))
+    return render_template('new_story.html')
+
+@app.route('/add_to_story/<int:story_id>', methods=['GET', 'POST'])
+def add_to_story(story_id):
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    if request.method == 'POST':
+        content = request.form['content']
+        user_id = session['user_id']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('INSERT INTO contributions (content, user_id, story_id) VALUES (?, ?, ?)', (content, user_id, story_id))
+            conn.commit()
+        return redirect(url_for('homepage'))
+    with sqlite3.connect('site.db') as conn:
+        c = conn.cursor()
+        c.execute('SELECT content FROM contributions WHERE story_id = ? ORDER BY id DESC LIMIT 1', (story_id,))
+        latest_contribution = c.fetchone()
+    return render_template('add_to_story.html', story_id=story_id, latest_contribution=latest_contribution)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+Public code references from 15 repositories
+
+2 vulnerabilities detected
+
+HTML Templates
+base.html
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storytelling Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                <a href="{{ url_for('homepage') }}">My Stories</a>
+                <a href="{{ url_for('new_story') }}">New Story</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
+
+Public code references from 12 repositories
+
+index.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to the Storytelling Website</h1>
+<p>Please <a href="{{ url_for('register') }}">register</a> or <a href="{{ url_for('login') }}">login</a> to participate.</p>
+{% endblock %}
+
+Public code references from 11 repositories
+
+register.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Register</h2>
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
+
+Public code references from 3 repositories
+
+login.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Login</h2>
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+{% endblock %}
+
+Public code references from 3 repositories
+
+new_story.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Create New Story</h2>
+<form method="POST">
+    <label for="title">Story Title:</label>
+    <input type="text" name="title" required>
+    <label for="content">Story Content:</label>
+    <textarea name="content" required></textarea>
+    <button type="submit">Create Story</button>
+</form>
+{% endblock %}
+
+Public code references from 7 repositories
+
+add_to_story.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Add to Story</h2>
+{% if latest_contribution %}
+    <p>Latest Contribution: {{ latest_contribution[0] }}</p>
+{% else %}
+    <p>No contributions yet. Be the first to add!</p>
+{% endif %}
+<form method="POST">
+    <label for="content">Your Contribution:</label>
+    <textarea name="content" required></textarea>
+    <button type="submit">Add to Story</button>
+</form>
+{% endblock %}
+
+Public code references from 7 repositories
+
+homepage.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>My Stories</h2>
+<ul>
+    {% for story in stories %}
+        <li>{{ story[1] }} - <a href="{{ url_for('add_to_story', story_id=story[0]) }}">Add to Story</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+Public code references from 5 repositories
+
+This setup includes user registration and login, creating new stories, and adding contributions to existing stories. It uses only the specified libraries and provides a basic structure that can be expanded as needed.
+Once a user has added to a story, they cannot add to it again.
+When creating a new story,
+
+    Users get to start with any amount of text and give the story a title.
+    Logged in users will be able to read any story they have contributed to on their homepage (the landing page after login).
+
+these features are not implemented
+
+Let's update the __init__.py file to include these features:
+
+    Preventing a user from adding to a story more than once: We need to check if the user has already contributed to the story before allowing them to add more.
+    Displaying stories a user has contributed to on their homepage: We need to query the contributions table to get the stories a user has contributed to and display them on the homepage.
+
+Updated __init__.py
+Python
+
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+import sqlite3
+import os
+import os.path
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+
+# Initialize the database
+def init_db():
+    if not os.path.exists('site.db'):
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('''CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)''')
+            c.execute('''CREATE TABLE stories (id INTEGER PRIMARY KEY, title TEXT, content TEXT, user_id INTEGER)''')
+            c.execute('''CREATE TABLE contributions (id INTEGER PRIMARY KEY, content TEXT, user_id INTEGER, story_id INTEGER)''')
+            conn.commit()
+
+init_db()
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
+            conn.commit()
+        flash('Account created!', 'success')
+        return redirect(url_for('login'))
+    return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
+            user = c.fetchone()
+            if user:
+                session['user_id'] = user[0]
+                session['username'] = user[1]
+                return redirect(url_for('homepage'))
+            else:
+                flash('Login Unsuccessful. Please check username and password', 'danger')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
+@app.route('/homepage')
+def homepage():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    user_id = session['user_id']
+    with sqlite3.connect('site.db') as conn:
+        c = conn.cursor()
+        # Get stories created by the user
+        c.execute('SELECT * FROM stories WHERE user_id = ?', (user_id,))
+        user_stories = c.fetchall()
+        # Get stories the user has contributed to
+        c.execute('''SELECT stories.id, stories.title
+                     FROM stories
+                     JOIN contributions ON stories.id = contributions.story_id
+                     WHERE contributions.user_id = ?''', (user_id,))
+        contributed_stories = c.fetchall()
+    return render_template('homepage.html', user_stories=user_stories, contributed_stories=contributed_stories)
+
+@app.route('/new_story', methods=['GET', 'POST'])
+def new_story():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        user_id = session['user_id']
+        with sqlite3.connect('site.db') as conn:
+            c = conn.cursor()
+            c.execute('INSERT INTO stories (title, content, user_id) VALUES (?, ?, ?)', (title, content, user_id))
+            conn.commit()
+        return redirect(url_for('homepage'))
+    return render_template('new_story.html')
+
+@app.route('/add_to_story/<int:story_id>', methods=['GET', 'POST'])
+def add_to_story(story_id):
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    user_id = session['user_id']
+    with sqlite3.connect('site.db') as conn:
+        c = conn.cursor()
+        # Check if the user has already contributed to the story
+        c.execute('SELECT * FROM contributions WHERE user_id = ? AND story_id = ?', (user_id, story_id))
+        if c.fetchone():
+            flash('You have already contributed to this story.', 'danger')
+            return redirect(url_for('homepage'))
+        if request.method == 'POST':
+            content = request.form['content']
+            c.execute('INSERT INTO contributions (content, user_id, story_id) VALUES (?, ?, ?)', (content, user_id, story_id))
+            conn.commit()
+            return redirect(url_for('homepage'))
+        # Get the latest contribution to the story
+        c.execute('SELECT content FROM contributions WHERE story_id = ? ORDER BY id DESC LIMIT 1', (story_id,))
+        latest_contribution = c.fetchone()
+    return render_template('add_to_story.html', story_id=story_id, latest_contribution=latest_contribution)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+Public code references from 12 repositories
+
+1 vulnerability detected
+
+Updated HTML Templates
+homepage.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>My Stories</h2>
+<ul>
+    {% for story in user_stories %}
+        <li>{{ story[1] }} - <a href="{{ url_for('add_to_story', story_id=story[0]) }}">Add to Story</a></li>
+    {% endfor %}
+</ul>
+<h2>Stories I've Contributed To</h2>
+<ul>
+    {% for story in contributed_stories %}
+        <li>{{ story[1] }} - <a href="{{ url_for('add_to_story', story_id=story[0]) }}">Add to Story</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+Public code references from 1 repository
+
+add_to_story.html
+HTML
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Add to Story</h2>
+{% if latest_contribution %}
+    <p>Latest Contribution: {{ latest_contribution[0] }}</p>
+{% else %}
+    <p>No contributions yet. Be the first to add!</p>
+{% endif %}
+<form method="POST">
+    <label for="content">Your Contribution:</label>
+    <textarea name="content" required></textarea>
+    <button type="submit">Add to Story</button>
+</form>
+{% endblock %}
+
+This update ensures that users can only add to a story once and displays the stories they have contributed to on their homepage.
+this doesn't work because the sql doesn't store ALL the users that have contributed. We need this to be able to tell who has contributed to both be able to tell if a user can edit a story (only editable if not edited already) and to tell if they can view the full story (only viewable after edit is made)
+
+To handle this, we need to ensure that the contributions table correctly tracks all contributions, and we need to update our queries and logic to use this information to determine if a user can add to a story or view the full story.
+
+Here's an updated implementation that addresses these requirements:
+Project Structure
+Code
+
+app/
+    __init__.py
+    templates/
+        base.html
+        index.html
+        login.html
+        register.html
+        new_story.html
+        add_to_story.html
+        homepage.html
+        view_story.html
+
+Public code references from 1 repository
+
+Updated __init__.py
+Public code references from 12 repositories
+
+1 vulnerability detected
+
+Updated HTML Templates
+homepage.html
+Public code references from 1 repository
+
+    github.com/shizhe7483/plant license
+
+add_to_story.html
+view_story.html
+Public code references from 1 repository
+
+This update ensures that the application tracks all contributions and enforces the rules about who can add to a story and view the full story.
+this is much better. But users cannot see the list of stories they CAN edit (have not edited or created). This means they can never edit any stories
+
+Let's update the __init__.py and relevant templates to include a section on the homepage that shows the list of stories a user can edit (stories they have not contributed to or created).
+Updated __init__.py
+Public code references from 12 repositories
+
+1 vulnerability detected
+
+Updated HTML Templates
+homepage.html
+Public code references from 2 repositories
+
+add_to_story.html
+view_story.html
+Public code references from 2 repositories
+
+This update includes a section on the homepage that lists stories the user can edit, alongside the list of stories they have created and contributed to. This ensures that users can easily find and add to stories they have not yet contributed to.
