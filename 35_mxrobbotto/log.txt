@@ -1,20 +1,19 @@
 # Jessica Yu, Victor Casado
-#
+# Salt Lamps
 # SoftDev
-# K35 - 
-# march 13, 2025
-# Time Spent: 
+# K35 - Now Again for the First Time
+# March 13, 2025
+# Time Spent: 2 hours
 
 DISCO:
 - Using just a flask file and the prompt gives a basic implementation but it uses a lot of non-ideal libraries
 - It tells you what other repositories it's drawing inspiration from
 - First attempt sort of works, it lets an user create stories, add stories, but you can't see the full story and you can't see other people's stories 
 - Sometimes it does side by side 
-- It's much slower than ChatGBT 
-- 
+- It's much slower than ChatGPT
 
 Q/C/C:
 some areas of interest...
-q0: How many tries did it take to "get it right?"
-q1: Did you catch any errors? If so, how did you notice, and what did you do?
-q2:
+q0: How many tries did it take to "get it right?" - 8
+q1: Did you catch any errors? If so, how did you notice, and what did you do? - Many and we told Copilot to fix and sometimes it worked
+q2: How similar or different is the bot's output to that of your past self / old team? - Less compl

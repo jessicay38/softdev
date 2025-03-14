@@ -1,9 +1,9 @@
 # Jessica Yu, Victor Casado
-#
+# Salt Lamps
 # SoftDev
-# K35 - 
-# march 13, 2025
-# Time Spent: 
+# K35 - Now Again for the First Time
+# March 13, 2025
+# Time Spent: 2 hours
 
 P00: Half-Quick Move Slowly and Fix Things
 Due: 2024-11-07r 08:00EST
@@ -362,9 +362,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 Public code references from 30 repositories
-
 2 vulnerabilities detected
-
 HTML Templates
 base.html
 HTML
@@ -404,7 +402,6 @@ HTML
 </html>
 
 Public code references from 15 repositories
-
 index.html
 HTML
 
@@ -415,7 +412,6 @@ HTML
 {% endblock %}
 
 Public code references from 11 repositories
-
 register.html
 HTML
 
@@ -432,7 +428,6 @@ HTML
 {% endblock %}
 
 Public code references from 18 repositories
-
 login.html
 HTML
 
@@ -449,7 +444,6 @@ HTML
 {% endblock %}
 
 Public code references from 15 repositories
-
 new_story.html
 HTML
 
@@ -466,7 +460,6 @@ HTML
 {% endblock %}
 
 Public code references from 16 repositories
-
 add_to_story.html
 HTML
 
@@ -482,7 +475,6 @@ HTML
 {% endblock %}
 
 Public code references from 13 repositories
-
 homepage.html
 HTML
 
@@ -526,7 +518,6 @@ app/
         homepage.html
 
 Public code references from 3 repositories
-
 __init__.py
 Python
 
@@ -638,9 +629,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 Public code references from 15 repositories
-
 2 vulnerabilities detected
-
 HTML Templates
 base.html
 HTML
@@ -680,7 +669,6 @@ HTML
 </html>
 
 Public code references from 12 repositories
-
 index.html
 HTML
 
@@ -691,7 +679,6 @@ HTML
 {% endblock %}
 
 Public code references from 11 repositories
-
 register.html
 HTML
 
@@ -708,7 +695,6 @@ HTML
 {% endblock %}
 
 Public code references from 3 repositories
-
 login.html
 HTML
 
@@ -725,7 +711,6 @@ HTML
 {% endblock %}
 
 Public code references from 3 repositories
-
 new_story.html
 HTML
 
@@ -742,7 +727,6 @@ HTML
 {% endblock %}
 
 Public code references from 7 repositories
-
 add_to_story.html
 HTML
 
@@ -762,7 +746,6 @@ HTML
 {% endblock %}
 
 Public code references from 7 repositories
-
 homepage.html
 HTML
 
@@ -914,7 +897,6 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 Public code references from 12 repositories
-
 1 vulnerability detected
 
 Updated HTML Templates
@@ -982,14 +964,11 @@ Public code references from 1 repository
 
 Updated __init__.py
 Public code references from 12 repositories
-
 1 vulnerability detected
 
 Updated HTML Templates
 homepage.html
 Public code references from 1 repository
-
-    github.com/shizhe7483/plant license
 
 add_to_story.html
 view_story.html
@@ -1001,15 +980,139 @@ this is much better. But users cannot see the list of stories they CAN edit (hav
 Let's update the __init__.py and relevant templates to include a section on the homepage that shows the list of stories a user can edit (stories they have not contributed to or created).
 Updated __init__.py
 Public code references from 12 repositories
-
 1 vulnerability detected
 
 Updated HTML Templates
 homepage.html
 Public code references from 2 repositories
-
 add_to_story.html
 view_story.html
 Public code references from 2 repositories
 
 This update includes a section on the homepage that lists stories the user can edit, alongside the list of stories they have created and contributed to. This ensures that users can easily find and add to stories they have not yet contributed to.
+here full story only shows the first contribution, even if there are more. Further, sign ups crash the app if the user already exists
+
+Let's address these issues:
+
+    Ensure Full Story is Displayed: We need to concatenate the initial story content with all contributions when displaying the full story.
+    Handle Duplicate User Signups: We need to check if a username already exists before allowing a new user to register.
+
+Updated __init__.py
+Public code references from 12 repositories
+1 vulnerability detected
+
+Updated HTML Templates
+homepage.html
+Public code references from 2 repositories
+view_story.html
+
+With these updates, the application will concatenate the initial story content with all contributions to display the full story. Additionally, it will check for duplicate usernames during registration and provide appropriate feedback.
+the stories i can edit section duplicates stories based on the # of contributions. Further, a created story is shows both in contributed to and created story sections
+
+Let's address the issues:
+
+    Avoiding Duplicates in the Editable Stories Section:
+        We'll use DISTINCT in our SQL query to ensure that stories do not appear multiple times based on the number of contributions.
+
+    Ensuring Created Stories Do Not Appear in the Contributed To Section:
+        We'll modify the query for contributed stories to exclude those created by the user.
+
+Updated __init__.py
+Public code references from 12 repositories
+2 vulnerabilities detected
+Updated HTML Templates
+homepage.html
+Public code references from 2 repositories
+view_story.html
+
+With these updates:
+
+    The editable_stories query uses DISTINCT to avoid duplicates.
+    The contributed_stories query excludes stories created by the user.
+    The full story view concatenates the initial story content with all contributions.
+
+the 1st entry (on creation) is duplicated
+
+Let's address the duplication issue by ensuring that the initial story content is not duplicated in the contributions table.
+Updated __init__.py
+Public code references from 12 repositories
+2 vulnerabilities detected
+Updated HTML Templates
+homepage.html
+Public code references from 5 repositories
+view_story.html
+
+With these updates:
+
+    The initial story content is no longer added to the contributions table.
+    The homepage displays the correct stories in each section without duplication.
+    The full story view concatenates the initial story content with all contributions accurately.
+
+if i create a story i can not view it, as it is not in the contributions table now
+
+To address this issue, we need to allow the user to view the stories they have created even if they have not contributed to them. We will modify the view_story route to check if the user has created the story, in addition to checking if they have contributed to it.
+Updated __init__.py
+Public code references from 12 repositories
+1 vulnerability detected
+
+Updated HTML Templates
+homepage.html
+view_story.html
+
+With these updates:
+
+    Users can view the stories they have created even if they have not added any contributions to them.
+    The view_story route checks if the user is the author of the story or has contributed to it before displaying the full story content.
+
+the homepage always displays as if the user is logged out.
+adding to a story only displays the last contribution if the last contribution was not the one upon story creation
+
+Let's address these issues:
+
+    Homepage Displays as if the User is Logged Out: Ensure that the session is checked correctly and user information is passed to the template.
+    Adding to a Story Only Displays the Last Contribution: Ensure that the latest contribution is displayed correctly, including the initial story content if it's the first addition.
+
+Updated __init__.py
+Public code references from 15 repositories
+Updated HTML Templates
+base.html
+Public code references from 6 repositories
+homepage.html
+Public code references from 11 repositories
+add_to_story.html
+Public code references from 5 repositories
+view_story.html
+Public code references from 3 repositories
+
+With these updates:
+
+    The homepage correctly displays the username and checks the session.
+    The latest contribution, including the initial story content if no contributions exist, is displayed correctly.
+    The base.html template correctly checks if the user is logged in by verifying the session.
+
+the home button displays the website as if the user is logged out
+
+The issue you're experiencing is most likely caused by the condition in the base.html template for checking if the user is logged in. We should update the base.html template to correctly check the session and ensure that the navigation links are displayed correctly based on the user's login status.
+Updated HTML Templates
+base.html
+Public code references from 4 repositories
+Updated __init__.py
+
+We should also ensure that the session data is correctly passed to the templates and the session is correctly checked.
+Public code references from 19 repositories
+1 vulnerability detected
+
+With these updates:
+
+    The base.html template correctly checks if the user is logged in by verifying the session.
+    The homepage route correctly passes the username from the session to the template.
+    The add_to_story route correctly displays the initial story content if no contributions exist.
+
+just remove the home button at the top
+
+Sure, I will remove the "Home" button from the navigation bar in the base.html template.
+Updated HTML Template
+base.html
+Public code references from 12 repositories
+
+With this change, the "Home" button has been removed from the navigation bar. The navigation bar will now display only "My Stories", "New Story", and "Logout" links when the user is logged in, and "Login" and "Register" links when the user is logged out.
