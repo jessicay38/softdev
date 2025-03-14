@@ -16,4 +16,4 @@ Q/C/C:
 some areas of interest...
 q0: How many tries did it take to "get it right?" - 8
 q1: Did you catch any errors? If so, how did you notice, and what did you do? - Many and we told Copilot to fix and sometimes it worked
-q2: How similar or different is the bot's output to that of your past self / old team? - Less compl
+q2: How similar or different is the bot's output to that of your past self / old team? - Less complex 
