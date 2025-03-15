@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add to Story</h2>
+{% if latest_contribution %}
+    <p>Latest Contribution: {{ latest_contribution[0] }}</p>
+{% else %}
+    <p>No contributions yet. Be the first to add!</p>
+{% endif %}
+<form method="POST">
+    <label for="content">Your Contribution:</label>
+    <textarea name="content" required></textarea>
+    <button type="submit">Add to Story</button>
+</form>
+{% endblock %}
